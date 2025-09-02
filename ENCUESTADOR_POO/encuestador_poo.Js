@@ -41,7 +41,7 @@ class Encuesta {
     });
 
     this.mostrarOpcionGanadora();
-    console.log("------------------------------------");
+    console.log("====================================");
   }
 
   mostrarOpcionGanadora() {
@@ -61,5 +61,35 @@ class Encuesta {
 class SistemaDeEncuestas {
   constructor() {
     this.encuestas = [];
+  }
+}
+ crearEncuesta(pregunta, arregloDeOpciones) {
+    const nuevaEncuesta = new Encuesta(pregunta, arregloDeOpciones);
+    this.encuestas.push(nuevaEncuesta);
+    console.log(`Se creó la encuesta: "${pregunta}"`);
+  }
+  listarEncuestas() {
+    if (this.encuestas.length === 0) {
+      console.log("No hay encuestas creadas.");
+      return;
+    }
+    console.log("Encuestas disponibles:");
+    this.encuestas.forEach((encuesta, indice) => {
+      console.log(`[${indice}] ${encuesta.pregunta}`);
+    });
+    console.log("====================================");
+  }
+   mostrarResultadosDeTodasLasEncuestas() {
+    if (this.encuestas.length === 0) {
+      console.log("No hay encuestas para mostrar, crea una primero.");
+      return;
+    }
+    console.log("*** RESULTADOS DE TODAS LAS ENCUESTAS ***");
+    this.encuestas.forEach(encuesta => encuesta.mostrarResultados());
+  }
+
+  mostrarTotalDeEncuestas() {
+    console.log(`Total de encuestas: ${this.encuestas.length}`);
+    return this.encuestas.length;
   }
 }
