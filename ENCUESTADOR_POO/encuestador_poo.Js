@@ -54,6 +54,12 @@ class Encuesta {
       opcion.cantidadDeVotos > opcionConMasVotos.cantidadDeVotos ? opcion : opcionConMasVotos
     );
 
-    console.log(` 🏆Opcion ganadora🏆 "${opcionGanadora.texto}" con ${opcionGanadora.cantidadDeVotos} voto(s).`);
+    console.log(`🏆Opcion ganadora🏆 "${opcionGanadora.texto}" con ${opcionGanadora.cantidadDeVotos} voto(s).`);
+  }
+}
+
+class SistemaDeEncuestas {
+  constructor() {
+    this.encuestas = [];
   }
 }
