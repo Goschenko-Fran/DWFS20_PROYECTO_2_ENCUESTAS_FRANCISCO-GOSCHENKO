@@ -62,12 +62,13 @@ class SistemaDeEncuestas {
   constructor() {
     this.encuestas = [];
   }
-}
+
  crearEncuesta(pregunta, arregloDeOpciones) {
     const nuevaEncuesta = new Encuesta(pregunta, arregloDeOpciones);
     this.encuestas.push(nuevaEncuesta);
     console.log(`Se creó la encuesta: "${pregunta}"`);
   }
+
   listarEncuestas() {
     if (this.encuestas.length === 0) {
       console.log("No hay encuestas creadas.");
@@ -79,6 +80,7 @@ class SistemaDeEncuestas {
     });
     console.log("====================================");
   }
+
    mostrarResultadosDeTodasLasEncuestas() {
     if (this.encuestas.length === 0) {
       console.log("No hay encuestas para mostrar, crea una primero.");
@@ -93,3 +95,16 @@ class SistemaDeEncuestas {
     return this.encuestas.length;
   }
 }
+
+// EJEMPLO
+const sistemaDeEncuestas = new SistemaDeEncuestas();
+
+sistemaDeEncuestas.crearEncuesta("¿Que color te gusta?", ["Rojo", "Azul", "Verde"]);
+
+sistemaDeEncuestas.listarEncuestas();
+
+sistemaDeEncuestas.votarEnEncuesta(0, 1); 
+
+sistemaDeEncuestas.mostrarTotalDeEncuestas();
+
+sistemaDeEncuestas.mostrarResultadosDeTodasLasEncuestas();
