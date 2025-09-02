@@ -60,7 +60,7 @@ class Encuesta {
   mostrarOpcionGanadora() {
     // Validamos si aún no hay votos
     if (this.opciones.every(opcion => opcion.cantidadDeVotos === 0)) {
-      console.log("ALERTA: Nadie ha emitido votos por esta encuesta todavía.");
+      console.log("ALERTA: Nadie ha emitido votos por esta encuesta todavía, se el primero en votar");
       return;
     }
 
