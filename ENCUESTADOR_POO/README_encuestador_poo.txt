@@ -1,37 +1,37 @@
-📊 Sistema de Encuestas (JavaScript - POO)
+📝 Sistema de Encuestas - JavaScript (Orientado a Objetos)
 
-Sistema de encuestas en JavaScript con programación orientada a objetos. Permite crear preguntas con hasta 3 opciones, registrar votos y mostrar resultados con la opción ganadora.
+Este proyecto permite crear y gestionar múltiples encuestas de forma sencilla usando programación orientada a objetos en JavaScript.
 
-🔹 Características
+✨ Características principales
 
-Máximo 8 encuestas por sistema.
+📊 Crear varias encuestas diferentes.
 
-Cada encuesta tiene máximo 3 opciones.
+📝 Cada encuesta puede tener máximo 8 preguntas.
 
-Registro de votos por opción.
+✅ Cada pregunta puede tener máximo 3 opciones de respuesta.
 
-Visualización de encuestas y resultados.
+🗳 Registro de votos para cada opción.
 
-Muestra automáticamente la opción ganadora.
+📈 Mostrar resultados por pregunta y opción ganadora.
 
-Validaciones para encuestas sin votos o índices inválidos.
+⚠ Alertas y validaciones si se exceden límites de preguntas o opciones.
 
-🔹 Clases principales
+🏷 Clases principales
 
-Opcion: Representa una respuesta y su contador de votos.
+Opcion: 🎯 Representa cada posible respuesta con contador de votos.
 
-Encuesta: Contiene la pregunta, opciones, votación y resultados.
+Pregunta: ❓ Contiene la pregunta y sus opciones, permite votar y mostrar resultados.
 
-SistemaDeEncuestas: Administra todas las encuestas, creación, listado y resultados.
+Encuesta: 📋 Contiene varias preguntas, permite agregarlas, votar y mostrar resultados.
 
-🔹 Ejemplo de uso
+SistemaDeEncuestas: 🛠 Administra todas las encuestas, permite crearlas, listarlas y mostrar resultados generales.
 
-Los ejemplos de cómo crear encuestas, votar y mostrar resultados están incluidos dentro del archivo JS. Solo abre la consola del navegador (F12) para interactuar.
+💡 Ejemplo de uso: En archivo Js.
 
-🔹 Ejecución
+📝 Notas
 
-Copiar el código en un archivo index.js.
+🔒 Se controla el máximo de 8 preguntas por encuesta.
 
-Abrir en el navegador.
+🔒 Se controla el máximo de 3 opciones por pregunta.
 
-Presionar F12 para ver la consola y seguir la interacción.
+💻 Todo el manejo se realiza por consola.
